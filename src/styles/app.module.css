@@ -1,0 +1,29 @@
+.app {
+    text-align: center;
+}
+
+.app__header {
+    background-color: rgb(39, 39, 110);
+    padding-top: 2rem;
+    position: sticky;
+    top: 0;
+}
+
+.app__heading {
+    color: var(--clr-primary);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.app__tagline {
+    background-color: var(--clr-primary);
+    color: var(--clr-dark);
+    font-size: 0.765rem;
+    font-weight: 500;
+    padding: 0.25em;
+}
+
+.app__main {
+    min-height: 200vh;
+    background: var(--clr-dark);
+}
