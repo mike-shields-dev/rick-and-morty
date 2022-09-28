@@ -4,18 +4,19 @@
   border-radius: 0.5rem;
   display: grid;
   gap: 1rem;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   grid-template-areas: "left right";
   margin: 0 auto;
   padding: 0.25rem 0.75rem;
-  width: 28rem;
+  height: 10rem;
+  max-width: 100%;
 }
 
 .controls__panel {
-    background: rgba(0,0,0,0.25);
+    background: rgba(0,0,0,0.1);
     border-radius: 0.5rem;
     border: 2px solid rgba(0, 0,0,0.05);
-    box-shadow: 2px 2px 4px 2px rgba(0,0,0,0.15);
+    box-shadow: 2px 2px 4px 2px rgba(0,0,0,0.1);
     display: grid;
     padding: 2rem 1rem;
 }

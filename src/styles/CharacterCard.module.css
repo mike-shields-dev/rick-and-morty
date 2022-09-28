@@ -1,0 +1,40 @@
+.character-card {
+  display: grid;
+  aspect-ratio: 2 / 1;
+  height: 10rem;
+  background: rgba(255, 255, 255, 0.25);
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "left right";
+  border-radius: 0.5rem;
+  transition: all 0.25s ease;
+}
+
+.character-card:hover {
+  box-shadow: inset 0 0 0 2px var(--clr-primary);
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.0125);
+}
+
+.character-card__image {
+  grid-area: left;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.character-card__stats {
+  padding: 0.5rem 0.5rem 0;
+  grid-area: right;
+  text-align: left;
+}
+
+.character-card__stat {
+  margin-bottom: 0.5rem;
+}
+
+.character-card__label {
+  font-weight: 500;
+}
+
+.character-card__is-dead {
+  color: red;
+}

@@ -1,11 +1,29 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../styles/app.module.css";
+import CharacterCard from "./CharacterCard";
 import Controls from "./Controls";
+import PageCounter from "./PageCounter";
 
 const App = () => {
-  const [status, setStatus] = useState("all");
+  const [filter, setFilter] = useState("all");
   const [page, setPage] = useState(1);
-  console.log({ status, page });
+  const [characters, setCharacters] = useState([]);
+
+  useEffect(() => {
+    const updateCharacters = async () => {
+      try {
+        const url = `https://rickandmortyapi.com/api/character/?page=${page}${
+          filter === "all" ? "" : `&status=${filter}`
+        }`;
+        const res = await fetch(url);
+        const data = await res.json();
+        setCharacters(data.results);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    updateCharacters();
+  }, [filter, page]);
 
   return (
     <div className={styles.app}>
@@ -18,8 +36,18 @@ const App = () => {
         </p>
       </header>
       <main className={styles.app__main}>
-        <Controls {...{ status, setStatus, page, setPage }} />
+        <Controls {...{ filter, setFilter, page, setPage }} />
+
+        <div className={styles["app__character-cards"]}>
+          {characters.map(({ id, name, species, status, image }) => (
+            <CharacterCard key={id} {...{ name, species, status, image }} />
+          ))}
+        </div>
       </main>
+
+      <footer className={styles.app__footer}>
+        <PageCounter {...{ page, setPage }} />
+      </footer>
     </div>
   );
 };

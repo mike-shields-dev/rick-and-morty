@@ -7,33 +7,30 @@ const PageCounter = ({ page, setPage }) => {
 
   return (
     <div className={styles["page-counter"]}>
-      <label htmlFor="page">Page</label>
-      <div className={styles["page-counter__input-wrap"]}>
-        <button
-          className={`${styles["page-counter__button"]} ${styles["page-counter__button--dec"]} `}
-          onClick={handleClick}
-          type="button"
-          value={-1}
-          disabled={page === 1}
-        >
-          -
-        </button>
-        <button
-          className={`${styles["page-counter__button"]} ${styles["page-counter__button--inc"]}`}
-          onClick={handleClick}
-          type="button"
-          value={1}
-        >
-          +
-        </button>
-        <input
-          className={styles["page-counter__input"]}
-          onChange={(e) => setPage(e.target.value)}
-          type="number"
-          id="page"
-          value={page}
-        />
-      </div>
+      <button
+        className={`${styles["page-counter__button"]} ${styles["page-counter__button--dec"]} `}
+        onClick={handleClick}
+        type="button"
+        value={-1}
+        disabled={page === 1}
+      >
+        -
+      </button>
+      <button
+        className={`${styles["page-counter__button"]} ${styles["page-counter__button--inc"]}`}
+        onClick={handleClick}
+        type="button"
+        value={1}
+      >
+        +
+      </button>
+      <input
+        className={styles["page-counter__input"]}
+        onChange={(e) => setPage(e.target.value)}
+        type="number"
+        id="page"
+        value={page}
+      />
     </div>
   );
 };

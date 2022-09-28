@@ -4,13 +4,16 @@ import styles from "../styles/Controls.module.css";
 import PageCounter from "./PageCounter";
 import StatusFilter from "./StatusFilter";
 
-const Controls = ({ status, setStatus, page, setPage }) => {
+const Controls = ({ filter, setFilter, page, setPage }) => {
   return (
     <div className={styles.controls}>
       <div className={`${styles.controls__panel} left`}>
-        <StatusFilter {...{ status, setStatus }} />
+        <StatusFilter {...{ filter, setFilter }} />
       </div>
       <div className={`${styles.controls__panel} right`}>
+        <label htmlFor="page" style={{ textAlign: "left" }}>
+          Page
+        </label>
         <PageCounter {...{ page, setPage }} />
       </div>
     </div>
@@ -18,8 +21,8 @@ const Controls = ({ status, setStatus, page, setPage }) => {
 };
 
 Controls.propTypes = {
-  status: PropTypes.string.isRequired,
-  setStatus: PropTypes.func.isRequired,
+  filter: PropTypes.string.isRequired,
+  setFilter: PropTypes.func.isRequired,
   page: PropTypes.number.isRequired,
   setPage: PropTypes.func.isRequired,
 };

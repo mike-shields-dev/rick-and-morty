@@ -66,7 +66,7 @@ exports[`App matches snapshot 1`] = `
                 />
               </label>
               <label
-                class="status-filter__label"
+                class="status-filter__label--active"
                 for="all"
               >
                 all
@@ -85,43 +85,72 @@ exports[`App matches snapshot 1`] = `
         <div
           class="controls__panel right"
         >
+          <label
+            for="page"
+            style="text-align: left;"
+          >
+            Page
+          </label>
           <div
             class="page-counter"
           >
-            <label
-              for="page"
+            <button
+              class="page-counter__button page-counter__button--dec "
+              disabled=""
+              type="button"
+              value="-1"
             >
-              Page
-            </label>
-            <div
-              class="page-counter__input-wrap"
+              -
+            </button>
+            <button
+              class="page-counter__button page-counter__button--inc"
+              type="button"
+              value="1"
             >
-              <button
-                class="page-counter__button page-counter__button--dec "
-                disabled=""
-                type="button"
-                value="-1"
-              >
-                -
-              </button>
-              <button
-                class="page-counter__button page-counter__button--inc"
-                type="button"
-                value="1"
-              >
-                +
-              </button>
-              <input
-                class="page-counter__input"
-                id="page"
-                type="number"
-                value="1"
-              />
-            </div>
+              +
+            </button>
+            <input
+              class="page-counter__input"
+              id="page"
+              type="number"
+              value="1"
+            />
           </div>
         </div>
       </div>
+      <div
+        class="app__character-cards"
+      />
     </main>
+    <footer
+      class="app__footer"
+    >
+      <div
+        class="page-counter"
+      >
+        <button
+          class="page-counter__button page-counter__button--dec "
+          disabled=""
+          type="button"
+          value="-1"
+        >
+          -
+        </button>
+        <button
+          class="page-counter__button page-counter__button--inc"
+          type="button"
+          value="1"
+        >
+          +
+        </button>
+        <input
+          class="page-counter__input"
+          id="page"
+          type="number"
+          value="1"
+        />
+      </div>
+    </footer>
   </div>
 </DocumentFragment>
 `;

@@ -1,26 +1,22 @@
 .page-counter {
-  text-align: left;
-}
-
-.page-counter__input-wrap {
-  position: relative;
-  margin-top: 1rem;
+  display: flex;
+  height: min-content;
+  justify-content: space-between;
 }
 
 .page-counter__input {
+  grid-area: middle;
   text-align: center;
-  position: absolute;
-  inset: 0 2rem 0 2rem;
   background: none;
   border: none;
   color: var(--clr-light);
-  height: 2rem;
-  outline: none;
+  min-width: 3rem;
+  width: calc(100% - 6rem);
 }
 
 .page-counter__input::-webkit-inner-spin-button {
+  opacity: 0;
   display: none;
-  width: 0;
   pointer-events: none;
 }
 
@@ -41,15 +37,15 @@
 }
 
 .page-counter__button:disabled {
-    opacity: 0.5;
-}
-
-.page-counter__button--inc {
-  position: absolute;
-  right: 0;
+  opacity: 0.5;
 }
 
 .page-counter__button--dec {
-  position: absolute;
-  left: 0;
+  grid-area: left;
 }
+
+.page-counter__button--inc {
+  grid-area: right;
+  order: 1;
+}
+
