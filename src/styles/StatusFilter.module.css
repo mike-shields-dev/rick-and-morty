@@ -1,0 +1,27 @@
+.status-filter {
+  border: none;
+  text-align: left;
+  font-size: 1rem;
+  padding-top: 1rem;
+}
+
+.status-filter__label {
+  border-radius: 0.25rem;
+  margin-right: 0.125rem;
+  padding: 0.25em 0.5em;
+  font-size: 0.625rem;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 500;
+}
+
+.status-filter__input {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

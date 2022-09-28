@@ -24,7 +24,103 @@ exports[`App matches snapshot 1`] = `
     <main
       class="app__main"
     >
-      Test
+      <div
+        class="controls"
+      >
+        <div
+          class="controls__panel left"
+        >
+          <fieldset
+            class="status-filter"
+          >
+            <legend>
+              Status: all
+            </legend>
+            <div
+              class="status-filter__inputs"
+            >
+              <label
+                class="status-filter__label"
+                for="alive"
+              >
+                alive
+                <input
+                  class="status-filter__input"
+                  id="alive"
+                  name="status"
+                  type="radio"
+                  value="alive"
+                />
+              </label>
+              <label
+                class="status-filter__label"
+                for="dead"
+              >
+                dead
+                <input
+                  class="status-filter__input"
+                  id="dead"
+                  name="status"
+                  type="radio"
+                  value="dead"
+                />
+              </label>
+              <label
+                class="status-filter__label"
+                for="all"
+              >
+                all
+                <input
+                  checked=""
+                  class="status-filter__input"
+                  id="all"
+                  name="status"
+                  type="radio"
+                  value="all"
+                />
+              </label>
+            </div>
+          </fieldset>
+        </div>
+        <div
+          class="controls__panel right"
+        >
+          <div
+            class="page-counter"
+          >
+            <label
+              for="page"
+            >
+              Page
+            </label>
+            <div
+              class="page-counter__input-wrap"
+            >
+              <button
+                class="page-counter__button page-counter__button--dec "
+                disabled=""
+                type="button"
+                value="-1"
+              >
+                -
+              </button>
+              <button
+                class="page-counter__button page-counter__button--inc"
+                type="button"
+                value="1"
+              >
+                +
+              </button>
+              <input
+                class="page-counter__input"
+                id="page"
+                type="number"
+                value="1"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   </div>
 </DocumentFragment>

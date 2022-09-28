@@ -7,23 +7,25 @@
     padding-top: 2rem;
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 
 .app__heading {
     color: var(--clr-primary);
     font-size: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .app__tagline {
     background-color: var(--clr-primary);
     color: var(--clr-dark);
-    font-size: 0.765rem;
+    font-size: 0.725rem;
     font-weight: 500;
-    padding: 0.25em;
+    padding: 0.25rem;
 }
 
 .app__main {
+    padding-top: 1.5rem;
     min-height: 200vh;
     background: var(--clr-dark);
 }

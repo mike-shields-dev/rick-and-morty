@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../styles/app.module.css";
+import Controls from "./Controls";
 
 const App = () => {
+  const [status, setStatus] = useState("all");
+  const [page, setPage] = useState(1);
+  console.log({ status, page });
+
   return (
     <div className={styles.app}>
       <header className={styles.app__header}>
@@ -12,7 +17,9 @@ const App = () => {
           it."`}
         </p>
       </header>
-      <main className={styles.app__main}>Test</main>
+      <main className={styles.app__main}>
+        <Controls {...{ status, setStatus, page, setPage }} />
+      </main>
     </div>
   );
 };
